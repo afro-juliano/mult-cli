@@ -8,13 +8,12 @@ import (
 )
 
 var rootCmd = &cobra.Command {
-    Use: "hugo",
-    Short: "Hugo is a very fast static site generator",
-    Long: `A Fast and Flexible static site generator built with
-                love by spf13 and friends in Go.
-                Complete documentation is available at http://hugo.spf13.com`,
+    Use: "mult-cli",
+    Short: "A mult level CLI",
+    Long: `A mult level CLI which can be upgradade to a more robust one
+            and stuffs like that`,
     Run: func(cmd *cobra.Command, args []string) {
-       // Do stuff here
+        fmt.Println("Welcome to mult-cli! Use --help for usage.")
     },
 }
 
@@ -23,10 +22,4 @@ func Execute() {
         fmt.Println(err)
         os.Exit(1)
     }
-}
-
-func init() {
-}
-
-func initConfig() {
 }
